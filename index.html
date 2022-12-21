@@ -44,9 +44,15 @@
 
                     </div>
                     <div class="lista-contatti">
-                        <ul>
-                            <li>
-
+                        <ul class="unstyled-list">
+                            <li v-for="item in contacts">
+                                <div class="contatti">
+                                    <div class="img-cerchio ">
+                                        <img :src="`./img/avatar${item.avatar}.jpg`" class="roundend">
+                                    </div>
+                                    {{item.name}}
+                                    {{item.messages.date}}
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -54,8 +60,8 @@
                 </div>
                 <div class="container-dx">
                     <div class="profilo-contatto">
-                        <div class="img-contatto">
-
+                        <div class="img-contatto"  >
+                            
                         </div>
                         <div class="pulsanti-contatto">
 

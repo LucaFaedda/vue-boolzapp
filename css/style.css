@@ -13,18 +13,25 @@ body{
     display: flex;
     max-width: 1300px;
     margin: 3rem auto;
-    height: 900px;
 }
 
 .container-sx{
     width: 35%;
-    border: 1px solid black;
+    background-color:#fff ;
+    height: 100%;
 }
 
 .container-dx{
     width: 65%;
     border: 1px solid black;
 }
+
+/* .profilo, .silenzia, .search-bar{
+    height: 10%;
+}
+.lista-contatti{
+    height: 70%;
+} */
 
 /* classe di utility */
 
@@ -76,6 +83,7 @@ body{
     background-color: #8edafc;
     display: flex;
     align-items: center;
+    height: 10%;
 
 }
 
@@ -102,6 +110,7 @@ body{
     width: 100%;
     background-color:#eaeaea;
     padding: 5px;
+
 }
 
 .input-ricerca{
@@ -119,9 +128,28 @@ body{
     border: none;
     background-color: transparent;
     margin-left: 5px;
-
 }
 /* sezione lista contatti */
+
+.lista-contatti{
+    background-color: #fff;
+}
+
+.unstyled-list{
+    list-style: none;
+}
+
+.unstyled-list li{
+    margin: 10px 0px;
+    padding: 5px;
+
+}
+
+.contatti{
+    display: flex;
+    align-items: center;
+}
+
 
 
 /* sezione profilo contatto */

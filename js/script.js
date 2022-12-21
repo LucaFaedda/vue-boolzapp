@@ -5,13 +5,15 @@ const{
 createApp({
     data(){
         return{
+
+            itemActive: 0,
             contacts: [
                 {
                     name: 'Michele',
                     avatar: '_1',
                     visible: true,
                     messages: [
-                        {   date: '',
+                        {   date:  '',
                             message: 'Hai portato a spasso il cane?',
                             status: 'sent'
                         },
@@ -152,6 +154,8 @@ createApp({
         }
         
     },
+
+
 
 }).mount('#app')
 
