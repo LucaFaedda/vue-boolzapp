@@ -143,7 +143,7 @@ body{
 .unstyled-list li{
     margin: 10px 0px;
     padding: 5px;
-
+    cursor: pointer;
 }
 
 .contatti{
