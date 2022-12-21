@@ -12,40 +12,43 @@
         <div id="app">
             <div class="container">
                 <div class="container-sx">
-                    <div class="profilo">
-                        <div class="img-profilo">
-                            <div class="img-cerchio">
-                                <img src="./img/avatar_io.jpg" alt="img-profilo" class="roundend">
+                    <div class="parte-superiore">
+                        <div class="profilo">
+                            <div class="img-profilo">
+                                <div class="img-cerchio">
+                                    <img src="./img/avatar_io.jpg" alt="img-profilo" class="roundend">
+                                </div>
+                                <div class="name">
+                                    <p>Io</p>
+                                </div>
                             </div>
-                            <div class="name">
-                                <p>Io</p>
+                            <div class="pulsanti-profilo">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div class="pulsanti-profilo">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <div class="silenzia">
+                            <div class="cerchio-icons">
+                                <i class="fa-regular fa-bell-slash"></i>
+                            </div>
+                            <div class="testo">
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#">Attiva notifiche Desktop</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="silenzia">
-                        <div class="cerchio-icons">
-                            <i class="fa-regular fa-bell-slash"></i>
-                        </div>
-                        <div class="testo">
-                            <p>Ricevi notifiche di nuovi messaggi</p>
-                            <a href="#">Attiva notifiche Desktop</a>
-                        </div>
-                    </div>
-                    <div class="search-bar">
-                        <div class="input-ricerca">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Cerca o Inizia Una nuova chat">
+                        <div class="search-bar">
+                            <div class="input-ricerca">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Cerca o Inizia Una nuova chat">
+                            </div>
+    
                         </div>
 
                     </div>
                     <div class="lista-contatti">
                         <ul class="unstyled-list">
-                            <li v-for="item in contacts">
+                            <li v-for="(item, index) in contacts" @click="userClick(index)">
                                 <div class="contatti">
                                     <div class="img-cerchio ">
                                         <img :src="`./img/avatar${item.avatar}.jpg`" class="roundend">
@@ -56,15 +59,22 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <div class="container-dx">
                     <div class="profilo-contatto">
-                        <div class="img-contatto"  >
-                            
+                        <div class="img-contatto" >
+                            <div class="img-cerchio ">
+                                <img :src="`./img/avatar${contacts[itemActive].avatar}.jpg`" class="roundend">
+                            </div>
+                            <div class="testo">
+                                {{ contacts[itemActive].name }}
+
+                            </div>
                         </div>
                         <div class="pulsanti-contatto">
-
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-paperclip"></i>
                         </div>
 
                     </div>
@@ -73,13 +83,15 @@
                     </div>
                     <div class="send-message">
                         <div class="emoticon">
-
+                            <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="input-text">
-
+                            <div class="input-invio">
+                                <input type="text" placeholder="Scrivi un messaggio">
+                            </div>
                         </div>
                         <div class="vocal">
-
+                            <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: blue;
+    background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,12 +18,14 @@ body{
 .container-sx{
     width: 35%;
     background-color:#fff ;
-    height: 100%;
 }
 
 .container-dx{
     width: 65%;
-    border: 1px solid black;
+}
+
+.parte-superiore{
+    height: 200px;
 }
 
 /* .profilo, .silenzia, .search-bar{
@@ -83,8 +85,6 @@ body{
     background-color: #8edafc;
     display: flex;
     align-items: center;
-    height: 10%;
-
 }
 
 .silenzia i{
@@ -133,6 +133,7 @@ body{
 
 .lista-contatti{
     background-color: #fff;
+    height: calc(100% - 200px);
 }
 
 .unstyled-list{
@@ -156,23 +157,36 @@ body{
 
 .profilo-contatto{
     width: 100%;
-    height: 50px;
+
     display: flex;
     justify-content: space-between;
 }
 
 .img-contatto, .pulsanti-contatto{
     width: 50%;
-    border: 1px solid black;
-    height: 100%;
     background-color:#eaeaea;
+    display: flex;
+    align-items: center;
+
 }
 
+.pulsanti-contatto{
+    color: #b1b1b1;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    
+}
+
+.pulsanti-contatto i{
+    margin: 5px;
+    margin-right: 10px;
+}
 /* sezione chat */
 
 .chat{
     height: calc(100% - 100px);
-    background-color:green;
+    background-image: url(../img/mine.jpg);
     width: 100%;
 }
 
@@ -186,15 +200,34 @@ body{
 }
 
 .emoticon, .vocal{
-    width: 20%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: rgb(255, 0, 21);
+    width: 10%;
+
+    background-color:#eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #b1b1b1;
 }
 
 .input-text{
-    width: 60%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: rgb(255, 0, 21);
+    width: 80%;
+    background-color:#eaeaea;
+    display: flex;
+    align-items: center;
+    
+}
+
+.input-invio{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-invio input{
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
 }
