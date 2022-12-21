@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blue;
+}
+
+.container{
+    display: flex;
+    max-width: 991px;
+    margin: 3rem auto;
+    height: 900px;
+}
+
+.container-sx{
+    width: 30%;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.container-dx{
+    width: 70%;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+/* sezione profilo utente */
+
+
+.profilo{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-profilo, .pulsanti-profilo{
+    width: 50%;
+    border: 1px solid black;
+    height: 100%;
+    background-color: yellow;
+}
+
+/* sezione silenzia */
+
+.silenzia{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+/* sezione search-bar */
+
+.search-bar{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+/* sezione lista contatti */
+
+
+/* sezione profilo contatto */
+
+.profilo-contatto{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-contatto, .pulsanti-contatto{
+    width: 50%;
+    border: 1px solid black;
+    height: 100%;
+    background-color: rgb(255, 0, 21);
+}
+
+/* sezione chat */
+
+.chat{
+    height: calc(100% - 100px);
+    background-color:green;
+    width: 100%;
+}
+
+/* sezione send-message */
+
+.send-message{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.emoticon, .vocal{
+    width: 20%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: rgb(255, 0, 21);
+}
+
+.input-text{
+    width: 60%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: rgb(255, 0, 21);
+}
