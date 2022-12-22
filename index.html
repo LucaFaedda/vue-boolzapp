@@ -41,7 +41,7 @@
                         <div class="search-bar">
                             <div class="input-ricerca">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" placeholder="Cerca o Inizia Una nuova chat">
+                                <input type="text" placeholder="Cerca o Inizia Una nuova chat"  v-model="search">
                             </div>
     
                         </div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="lista-contatti">
                         <ul class="unstyled-list">
-                            <li v-for="(item, index) in contacts" @click="userClick(index)">
+                            <li v-for="(item, index) in filteredContacts" @click="userClick(index)">
                                 <div class="contatti">
                                     <div class="info-contatti">
                                         <div class="img-cerchio ">
@@ -91,6 +91,7 @@
                     </div>
                     <div class="chat">
                         <div>
+                            <!-- praticamente io gli dico di ciclare i message nell'array contacts all'indice attualmente attivo e ciclare dnetro messages -->
                             <div  v-for="message in contacts[itemActive].messages" :class="message.status == 'sent' ? 'sent' : 'receveid'">
                                 <div class="message">
                                     {{message.message}}  
@@ -107,7 +108,7 @@
                         </div>
                         <div class="input-text">
                             <div class="input-invio">
-                                <input type="text" placeholder="Scrivi un messaggio">
+                                <input type="text" placeholder="Scrivi un messaggio" v-model="nuovo" @keyup.enter="nuovaChat">
                             </div>
                         </div>
                         <div class="vocal">

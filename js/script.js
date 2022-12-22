@@ -5,7 +5,9 @@ const{
 createApp({
     data(){
         return{
-
+            
+            search: '',
+            nuovo: '',
             itemActive: 0,
             contacts: [
                 {
@@ -159,8 +161,31 @@ createApp({
         {
             this.itemActive = index 
             console.log(`Elemento attivo:${this.itemActive}`)
+        },
+        nuovaChat()
+        {
+            // dichairo prima una variabile che vado ad inserire nell'array contacts 
+            let chatNuova = {
+                date: '10/01/2020 15:30:55',
+                message: this.nuovo,
+                status: 'receveid'
+            }
+
+            this.contacts.messages.push(chatNuova)
+            this.nuovo = ''
+            console.log(this.nuovaChat)
+
         }
     },
+    computed:{
+        // filtro l'array contatti e mi creo un'arrow function che mi 
+        filteredContacts: function(){
+            return this.contacts.filter((contact)=>{
+                return contact.name.match(this.search.toUpperCase())         
+            })
+        }
+    }
+
 
 
 
