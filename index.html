@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.1/luxon.min.js" integrity="sha512-hZKz8wkgOcWeZanRioE6H6AC3OJspzJQyDBB5jLoZ1jIKbYDt5MwVIvU703WwE4sjvKZw9uNmmYlt29xKS27RA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <title>Boolzapp Con Vue.js</title>
     </head>
     <body>
@@ -50,19 +51,23 @@
                         <ul class="unstyled-list">
                             <li v-for="(item, index) in contacts" @click="userClick(index)">
                                 <div class="contatti">
-                                    <div class="img-cerchio ">
-                                        <img :src="`./img/avatar${item.avatar}.jpg`" class="roundend" :alt="item.name">
-                                    </div>
-                                    <div>
-                                        <div class="info-contatti">
+                                    <div class="info-contatti">
+                                        <div class="img-cerchio ">
+                                            <img :src="`./img/avatar${item.avatar}.jpg`" class="roundend" :alt="item.name">
+                                        </div>
+                                        <div>
                                             {{item.name}}
-                                            {{item.messages.date}}
-                                        </div>
-                                        <div class="last-message">
-                                            {{item.messages[item.messages.length-1].message}}
+                                            <div class="last-message">
+                                                {{item.messages[item.messages.length-1].message}}
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="info-contatti">
+                                        <div class="last-data">
+                                            {{item.messages[item.messages.length-1].date}}
+                                        </div>
                                     </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -75,7 +80,6 @@
                             </div>
                             <div class="testo">
                                 {{ contacts[itemActive].name }}
-
                             </div>
                         </div>
                         <div class="pulsanti-contatto">
@@ -87,9 +91,8 @@
                     </div>
                     <div class="chat">
                         <div class="sent">
-                            <div v-for="(contacts, index) in messages">
-                                {{ contacts.message}} {{ index }}
-
+                            <div v-for="item in contacts">
+                               {{ contacts[itemActive].messages[item.message] }}
                             </div>
                         </div>
                         <div class="receveid">

@@ -149,11 +149,17 @@ body{
 .contatti{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.last-message{
+.last-message, .last-data{
     font-size: 10px;
     color: #b1b1b1;
+}
+
+.info-contatti{
+    display: flex;
+    align-items: center;
 }
 
 
