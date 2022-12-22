@@ -13,6 +13,7 @@ body{
     display: flex;
     max-width: 1300px;
     margin: 3rem auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .container-sx{
@@ -198,6 +199,35 @@ body{
     height: calc(100% - 100px);
     background-image: url(../img/mine.jpg);
     width: 100%;
+    padding:5rem;
+
+}
+
+.message{
+	padding: 0.5rem 1rem;
+    min-height: 2.25rem;
+}
+
+.sent{
+    border-radius: 1.125rem 1.125rem  0 ;
+    padding-top: 5px;
+    background-color: #d5f9ba;
+    padding: 0.5rem 1rem;
+    min-height: 2.25rem;
+	width: fit-content;
+	max-width: 66%;
+    margin: 20px 0px 30px 25rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.receveid{
+    padding: 0.5rem 1rem;
+	background: rgb(238, 236, 236);
+    min-height: 2.25rem;
+	width: fit-content;
+	max-width: 66%;
+    border-radius: 1.125rem 1.125rem 1.125rem 0;
 }
 
 /* sezione send-message */

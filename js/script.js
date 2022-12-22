@@ -120,7 +120,7 @@ createApp({
                     visible: true,
                     messages: [
                         {   date: '10/01/2020 15:30:55',
-                            message: 'Fai gli auguri a MArtina che è il suo compleanno',
+                            message: 'Fai gli auguri a Martina che è il suo compleanno',
                             status: 'sent'
                         },
                         {   date: '10/01/2020 15:50:00',
@@ -139,7 +139,7 @@ createApp({
                             status: 'receveid'
                         },
                         {   date: '10/01/2020 15:50:00',
-                            message: 'No, l\'ho già mangiasta ieri, ordiniamo del sushi!!!',
+                            message: 'No, l\'ho già mangiata ieri, ordiniamo del sushi!!!',
                             status: 'sent'
                         }, 
                         {   date:  '10/01/2020 15:51:00',
@@ -158,7 +158,7 @@ createApp({
         userClick(index)
         {
             this.itemActive = index 
-            console.log(`ITEMACTIVE:${this.itemActive}`)
+            console.log(`Elemento attivo:${this.itemActive}`)
         }
     },
 

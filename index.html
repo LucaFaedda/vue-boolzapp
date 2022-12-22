@@ -90,12 +90,14 @@
 
                     </div>
                     <div class="chat">
-                        <div class="sent">
-                            <div v-for="item in contacts">
-                               {{ contacts[itemActive].messages[item.message] }}
+                        <div>
+                            <div  v-for="message in contacts[itemActive].messages" :class="message.status == 'sent' ? 'sent' : 'receveid'">
+                                <div class="message">
+                                    {{message.message}}  
+                                </div>
+                           
+                            
                             </div>
-                        </div>
-                        <div class="receveid">
                             
                         </div>
                     </div>
