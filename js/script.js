@@ -178,7 +178,7 @@ createApp({
         }
     },
     computed:{
-        // filtro l'array contatti e mi creo un'arrow function che mi 
+        // filtro l'array contatti e mi creo un'arrow function che mi ricerca i nomi 
         filteredContacts: function(){
             return this.contacts.filter((contact)=>{
                 return contact.name.match(this.search.toUpperCase())         
