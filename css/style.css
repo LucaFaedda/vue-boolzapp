@@ -207,6 +207,7 @@ body{
 .message{
 	padding: 0.5rem 1rem;
     min-height: 2.25rem;
+    display: flex;
 }
 
 .sent{
@@ -230,9 +231,30 @@ body{
 	max-width: 66%;
     border-radius: 1.125rem 1.125rem 1.125rem 0;
     margin: 20px 0px 30px 0px;
-
 }
 
+
+.dropdown-menu{
+    display: none;
+    margin: 10px 5px 20px 10px;
+    border: 1px solid black;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 10px 0px #00000054;
+}
+
+.dropdown-trigger{
+    border: none;
+    background: transparent;
+    margin-left: 1rem;
+}
+
+.dropdown-trigger:focus + .dropdown-menu,
+.dropdown-trigger:active + .dropdown-menu {
+  display: block;
+} 
 /* sezione send-message */
 
 .send-message{

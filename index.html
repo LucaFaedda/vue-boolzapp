@@ -94,7 +94,19 @@
                             <!-- praticamente io gli dico di ciclare i message nell'array contacts all'indice attualmente attivo e ciclare dnetro messages -->
                             <div  v-for="message in contacts[itemActive].messages" :class="message.status == 'sent' ? 'sent' : 'receveid'">
                                 <div class="message">
-                                    {{message.message}}  
+                                    <div>
+                                        {{message.message}}
+
+                                    </div>
+                                    <div class="dropdown"  >
+                                        <button class="dropdown-trigger" @click="toggleDropdown"><i class="fa-solid fa-chevron-down"></i></button>
+                                        <div class="dropdown-menu">
+                                            <ul class="unstyled-list ">
+                                                <li>Elimina</li>
+                                            </ul>
+
+                                        </div>
+                                    </div>  
                                 </div>
                            
                             

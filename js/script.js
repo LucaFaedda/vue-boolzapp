@@ -6,7 +6,7 @@ createApp({
     data(){
         return{
             
-            rispostaAutomatica: null,
+            dropdownOpen: false,
             search: '',
             nuovo: '',
             itemActive: 0,
@@ -193,9 +193,12 @@ createApp({
             setTimeout(() =>{
                 this.risposta()
             }, 1000)
-            
-         
+
         },
+        toggleDropdown()
+        {
+            this.dropdownOpen = !this.dropdownOpen;
+        }
     },
     computed:{
         // filtro l'array contatti e mi creo un'arrow function che mi ricerca i nomi 
