@@ -168,10 +168,10 @@ createApp({
             let chatNuova = {
                 date: '10/01/2020 15:30:55',
                 message: this.nuovo,
-                status: 'receveid'
+                status: 'sent'
             }
 
-            this.contacts.messages.push(chatNuova)
+            this.contacts[this.itemActive].messages.push(chatNuova)
             this.nuovo = ''
             console.log(this.nuovaChat)
 
