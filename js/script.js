@@ -6,6 +6,7 @@ createApp({
     data(){
         return{
             
+            rispostaAutomatica: null,
             search: '',
             nuovo: '',
             itemActive: 0,
@@ -171,11 +172,30 @@ createApp({
                 status: 'sent'
             }
 
-            this.contacts[this.itemActive].messages.push(chatNuova)
+            if(this.contacts[this.itemActive].messages.push(chatNuova)){
+                this.tempoRisposta()
+                
+            }
             this.nuovo = ''
-            console.log(this.nuovaChat)
+        },
+        risposta(){
+            let chatNuova2 = {
+                date: '10/01/2020 15:30:55',
+                message: 'ok',
+                status: 'recived'
+            }
 
-        }
+            this.contacts[this.itemActive].messages.push(chatNuova2)
+            
+        },
+        tempoRisposta()
+        {
+            setTimeout(() =>{
+                this.risposta()
+            }, 1000)
+            
+         
+        },
     },
     computed:{
         // filtro l'array contatti e mi creo un'arrow function che mi ricerca i nomi 
