@@ -51,11 +51,18 @@
                             <li v-for="(item, index) in contacts" @click="userClick(index)">
                                 <div class="contatti">
                                     <div class="img-cerchio ">
-                                        <img :src="`./img/avatar${item.avatar}.jpg`" class="roundend">
+                                        <img :src="`./img/avatar${item.avatar}.jpg`" class="roundend" :alt="item.name">
                                     </div>
-                                    {{item.name}}
-                                    {{item.messages.date}}
-                                </div>
+                                    <div>
+                                        <div class="info-contatti">
+                                            {{item.name}}
+                                            {{item.messages.date}}
+                                        </div>
+                                        <div class="last-message">
+                                            {{item.messages[item.messages.length-1].message}}
+                                        </div>
+                                    </div>
+                                    </div>
                             </li>
                         </ul>
                     </div>
@@ -64,7 +71,7 @@
                     <div class="profilo-contatto">
                         <div class="img-contatto" >
                             <div class="img-cerchio ">
-                                <img :src="`./img/avatar${contacts[itemActive].avatar}.jpg`" class="roundend">
+                                <img :src="`./img/avatar${contacts[itemActive].avatar}.jpg`" class="roundend" >
                             </div>
                             <div class="testo">
                                 {{ contacts[itemActive].name }}
@@ -79,11 +86,14 @@
 
                     </div>
                     <div class="chat">
-                        <div v-for="(item, index) in contacts">
-                            <div v-for="(item, index) in messages">
-                                {{item.message[0]}}
+                        <div class="sent">
+                            <div v-for="(contacts, index) in messages">
+                                {{ contacts.message}} {{ index }}
 
                             </div>
+                        </div>
+                        <div class="receveid">
+                            
                         </div>
                     </div>
                     <div class="send-message">

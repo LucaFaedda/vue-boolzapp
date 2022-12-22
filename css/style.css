@@ -151,6 +151,10 @@ body{
     align-items: center;
 }
 
+.last-message{
+    font-size: 10px;
+    color: #b1b1b1;
+}
 
 
 /* sezione profilo contatto */
