@@ -198,6 +198,11 @@ createApp({
         toggleDropdown()
         {
             this.dropdownOpen = !this.dropdownOpen;
+        },
+        eliminaChat(){
+    
+           Vue.delete(this.contacts, 'messages')
+            
         }
     },
     computed:{
