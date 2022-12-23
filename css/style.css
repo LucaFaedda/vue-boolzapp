@@ -255,6 +255,13 @@ body{
 .dropdown-trigger:active + .dropdown-menu {
   display: block;
 } 
+
+.last-data-2{
+    font-size: 10px;
+    color: #b1b1b1;
+    text-align: right;
+
+}
 /* sezione send-message */
 
 .send-message{

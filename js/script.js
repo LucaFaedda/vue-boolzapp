@@ -2,6 +2,8 @@ const{
     createApp
 } = Vue
 
+const dt = luxon.DateTime; // abbiamo creato una variabile che è un oggetto dei time
+
 createApp({
     data(){
         return{
@@ -165,9 +167,12 @@ createApp({
         },
         nuovaChat()
         {
-            // dichairo prima una variabile che vado ad inserire nell'array contacts 
+            // dichiaro prima una variabile che vado ad inserire nell'array contacts
+            let date = dt.now().setLocale('it').toLocaleString(dt.TIME_WITH_SECONDS)
+            console.log(date)
+            
             let chatNuova = {
-                date: '10/01/2020 15:30:55',
+                date: date,
                 message: this.nuovo,
                 status: 'sent'
             }
@@ -179,8 +184,9 @@ createApp({
             this.nuovo = ''
         },
         risposta(){
+            let date = dt.now().setLocale('it').toLocaleString(dt.TIME_WITH_SECONDS)
             let chatNuova2 = {
-                date: '10/01/2020 15:30:55',
+                date: date,
                 message: 'ok',
                 status: 'recived'
             }
@@ -199,9 +205,9 @@ createApp({
         {
             this.dropdownOpen = !this.dropdownOpen;
         },
-        eliminaChat(){
+        eliminaChat(index){
     
-           Vue.delete(this.contacts, 'messages')
+        this.contacts[this.itemActive].messages.splice(index, 1)
             
         }
     },
